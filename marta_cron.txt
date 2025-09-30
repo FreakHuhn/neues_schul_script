@@ -1,1 +1,1 @@
-* * * * * date > /home/Marta/.date.txt
+* * * * * date > /home/Marta/.date.txt # Date sollte alle 20 Minuten gespeichert werden.
