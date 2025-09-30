@@ -8,6 +8,6 @@ groupadd designers
 usermod -aG programmers Anna
 usermod -aG programmers Marta
 echo "0 2 * * 7 reboot" > anna_cron.txt
-echo "* * * * * date > /home/Marta/.date.txt" > marta_cron.txt
+echo "*/20 * * * * date > /home/Marta/.date.txt" > marta_cron.txt
 crontab -u Anna ./anna_cron.txt
 crontab -u Marta ./marta_cron.txt
