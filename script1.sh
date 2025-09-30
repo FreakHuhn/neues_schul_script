@@ -7,7 +7,13 @@ groupadd programmers
 groupadd designers
 usermod -aG programmers Anna
 usermod -aG programmers Marta
-echo "0 2 * * 7 reboot" > anna_cron.txt
-echo "*/20 * * * * date > /home/Marta/.date.txt" > marta_cron.txt
-crontab -u Anna ./anna_cron.txt
-crontab -u Marta ./marta_cron.txt
+
+#Ist richtig, geht aber einfacher, siehe unten Beispiel.
+#echo "0 2 * * 7 reboot" > anna_cron.txt
+#echo "*/20 * * * * date > /home/Marta/.date.txt" > marta_cron.txt
+#crontab -u Anna ./anna_cron.txt
+#crontab -u Marta ./marta_cron.txt
+
+#Beispiel
+echo "0 2 * * 7 reboot" | crontab -u Anna
+echo "*/20 * * * * date | crontab -u Marta
